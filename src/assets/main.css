@@ -1,0 +1,65 @@
+@import "./base.css";
+
+#app {
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
+
+@media (min-width: 1024px) {
+  body {
+    place-items: top;
+    width: 100%;
+  }
+
+  #app {
+    padding: 0 0;
+  }
+}
+
+main {
+  margin-top: 7rem !important;
+}
+
+.card {
+  --bs-card-spacer-y: 0.35rem;
+  --bs-card-title-spacer-y: 0;
+  --bs-card-spacer-x: 0;
+  z-index: 0;
+  max-height: 15rem;
+  transition: transform 0.2s 0s ease-in-out, z-index 0s 100ms;
+}
+
+.home_carousel .carousel-inner img {
+  object-fit: cover;
+  height: 15rem;
+}
+
+.detail_carousel .carousel-inner img {
+  object-fit: scale-down;
+  max-height: 30rem;
+}
+
+.card:hover {
+  transform: scale(1.25);
+  z-index: 999;
+  transition: transform 0.2s 0s ease-in-out, z-index 0s 0s;
+}
+
+.card:hover .carousel-inner img {
+  object-fit: contain;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.carousel,
+.badge,
+.navbar-brand,
+.custom-card-title {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+  user-select: none; /* Standard */
+}
