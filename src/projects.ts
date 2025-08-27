@@ -69,19 +69,6 @@ export const projects: Project[] = [
       "This Android application was the part of the work I completed for CIGEC during my internship in the second year of my two-year College Diploma in Technical Training in Computer Science. This mobile app allows CIGEC employees to submit their expense reports to the company, including photos to verify the accuracy of the information.",
   },
   {
-    id: "encrypTed",
-    title: "encrypTed",
-    homeTitle: false,
-    subtitle_fr: "Script sécurisé de chiffrement de messages",
-    subtitle_en: "Secure message encryption script",
-    techStack: ["Python"],
-    description_fr:
-      "Ce script permet de chiffrer n'importe quel message pour qu'il soit complètement illisible, tout en gardant la ponctuation et les symboles parce que je trouvais ça drôle, tout les détails du fonctionnement sont disponibles sur le dépôt Github.",
-    description_en:
-      "This script encrypts any message to make it completely unreadable while keeping punctuation and symbols intact because I thought it was funny. All the details about how it works are available on the GitHub repository.",
-    githubLink: "https://github.com/Tev4/encrypTed",
-  },
-  {
     id: "wizard_defender",
     title: "Wizard Defender",
     homeTitle: true,
@@ -94,6 +81,19 @@ export const projects: Project[] = [
       "A video game where you play as a wizard defending your castle. The game speed increases over time, making it very challenging for players to survive for long. The files are available on the GitHub repository, along with a website explaining the game controls.",
     directLink: "https://wizard-defender.vercel.app/",
     githubLink: "https://github.com/Tev4/Wizard_Defender",
+  },
+  {
+    id: "encrypTed",
+    title: "encrypTed",
+    homeTitle: false,
+    subtitle_fr: "Script sécurisé de chiffrement de messages",
+    subtitle_en: "Secure message encryption script",
+    techStack: ["Python"],
+    description_fr:
+      "Ce script permet de chiffrer n'importe quel message pour qu'il soit complètement illisible, tout en gardant la ponctuation et les symboles parce que je trouvais ça drôle, tout les détails du fonctionnement sont disponibles sur le dépôt Github.",
+    description_en:
+      "This script encrypts any message to make it completely unreadable while keeping punctuation and symbols intact because I thought it was funny. All the details about how it works are available on the GitHub repository.",
+    githubLink: "https://github.com/Tev4/encrypTed",
   },
   {
     id: "coureur_gps",
