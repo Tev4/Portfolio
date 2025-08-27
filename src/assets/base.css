@@ -23,7 +23,7 @@
 
 /* semantic color variables for this project */
 :root {
-  --color-background: var(--vt-c-white);
+  --color-background: var(--vt-c-white-soft);
   --color-background-soft: var(--vt-c-white-soft);
   --color-background-mute: var(--vt-c-white-mute);
 
@@ -63,6 +63,36 @@ html.dark {
   --color-background: var(--bs-dark) !important;
   --bs-navbar-brand-color: var(--vt-c-white) !important;
   --bs-card-border-color: var(--bs-dark) !important;
+  --bs-offcanvas-bg: var(--bs-dark) !important;
+  --bs-offcanvas-color: var(--vt-c-white) !important;
+}
+
+html:not(.dark) {
+  --bs-carousel-indicator-active-bg: #555555;
+}
+
+html.dark .offcanvas {
+  --bs-offcanvas-bg: var(--bs-dark) !important;
+  --bs-offcanvas-color: var(--vt-c-white) !important;
+}
+
+html.dark .offcanvas-header button {
+  filter: invert(1);
+}
+
+html.dark a.custom-link {
+  color: #bbb;
+}
+
+html.dark a.custom-link:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+html.dark a.custom-link:focus,
+html.dark a.custom-link:active {
+  color: white !important;
+  text-decoration: underline;
 }
 
 html:not(.dark) .carousel-control-next-icon,
