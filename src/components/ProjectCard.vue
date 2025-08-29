@@ -26,45 +26,70 @@ const images = ref<string[]>([]);
 const loadedImagesCache = ref<{ [key: string]: string[] }>({}); // Cache to store loaded images
 
 const loadProjectImages = async (project: string) => {
-  // If images are already loaded for this project, use the cached version
+  // If already cached, just use it
   if (loadedImagesCache.value[project]) {
     images.value = loadedImagesCache.value[project];
-    return; // Skip reloading images if they're already in cache
+    return;
   }
 
   const prefix = `/src/assets/project_images/${project}/`;
 
-  // Filter image paths matching the current project
+  // Filter and sort image paths
   const filteredEntries = Object.entries(imageModules).filter(([path]) =>
     path.startsWith(prefix)
   );
-
-  // Sort by filename number (assumes filename ends with something like '1.png')
   filteredEntries.sort(([pathA], [pathB]) => {
     const getNumber = (path: string) => {
-      // Extract the number from the filename, e.g. '.../3.png' -> 3
       const match = path.match(/(\d+)\.png$/);
       return match ? parseInt(match[1], 10) : 0;
     };
     return getNumber(pathA) - getNumber(pathB);
   });
 
-  // Dynamically import each filtered image and collect their URLs
-  const loadedImages = await Promise.all(
-    filteredEntries.map(async ([, importer]) => {
-      const module = await importer();
-      return module as string;
-    })
-  );
+  if (filteredEntries.length === 0) return;
 
-  images.value = loadedImages;
-  loadedImagesCache.value[project] = loadedImages; // Cache the images for future use
+  // --- Load & Preload the first image immediately ---
+  const [firstPath, firstImporter] = filteredEntries[0];
+  const firstModule = await firstImporter();
+  const firstImageUrl = firstModule as string;
+
+  // Add rel="preload" for the first image
+  const preloadLink = document.createElement("link");
+  preloadLink.rel = "preload";
+  preloadLink.as = "image";
+  preloadLink.href = firstImageUrl;
+  document.head.appendChild(preloadLink);
+
+  images.value = [firstImageUrl];
+
+  // --- Prefetch the remaining images in background ---
+  (async () => {
+    const remaining = await Promise.all(
+      filteredEntries.slice(1).map(async ([, importer]) => {
+        const mod = await importer();
+        const url = mod as string;
+
+        // Add rel="prefetch" for lazy loading
+        const link = document.createElement("link");
+        link.rel = "prefetch";
+        link.as = "image";
+        link.href = url;
+        document.head.appendChild(link);
+
+        return url;
+      })
+    );
+
+    const all = [firstImageUrl, ...remaining];
+    loadedImagesCache.value[project] = all;
+    images.value = all; // Update carousel once everything is prefetched
+  })();
 };
 
 onMounted(async () => {
-  await loadProjectImages(props.project); // wait for images to load
-  await nextTick(); // wait for DOM update (carousel rendered)
-  myCarousel.value?.pause(); // pause carousel immediately
+  await loadProjectImages(props.project);
+  await nextTick();
+  myCarousel.value?.pause();
 });
 
 const pause = () => myCarousel.value?.pause();

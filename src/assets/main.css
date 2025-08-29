@@ -74,3 +74,11 @@ main {
 .fade-leave-to {
   opacity: 0;
 }
+
+.offcanvas-header {
+  padding-bottom: 0 !important;
+}
+
+.offcanvas-body {
+  padding-top: 0 !important;
+}

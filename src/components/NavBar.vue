@@ -65,6 +65,7 @@ const changeLanguage = (lang: string) => {
 
     <BNavbarToggle target="nav-offcanvas" />
     <BOffcanvas id="nav-offcanvas" title="Menu" placement="end" is-nav>
+      <hr class="solid" />
       <BNav>
         <BRow class="offcanvas-brow">
           <BCol md="auto"
@@ -93,9 +94,6 @@ const changeLanguage = (lang: string) => {
             </BButton>
           </BCol>
         </BRow>
-
-        <hr class="solid" />
-
         <BRow class="offcanvas-brow">
           <BCol md="auto">
             <p class="offcanvas-option-title">
@@ -127,7 +125,6 @@ const changeLanguage = (lang: string) => {
 .navbar-svg-link {
   margin-left: 0.25rem !important;
   margin-right: 0.25rem !important;
-  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .fw-bold {
