@@ -21,6 +21,12 @@ main {
   margin-top: 7rem !important;
 }
 
+@media (max-width: 768px) {
+  main {
+    margin-top: 4rem !important;
+  }
+}
+
 .card {
   --bs-card-spacer-y: 0.35rem;
   --bs-card-title-spacer-y: 0;
