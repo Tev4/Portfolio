@@ -132,8 +132,6 @@ const changeLanguage = (lang: string) => {
   border-style: solid;
   border-width: 1px;
   border-radius: 20px;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 .fw-bold {
