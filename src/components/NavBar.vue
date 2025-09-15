@@ -287,6 +287,11 @@ html.dark .flag-emoji-selected {
   margin: auto;
 }
 
+.navbar-brand h2 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
 .navbar-toggler {
   filter: invert(1);
 }
