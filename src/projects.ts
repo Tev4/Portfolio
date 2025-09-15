@@ -25,9 +25,9 @@ export const projects: Project[] = [
       "Internship - Development of several modules of the application",
     techStack: ["Codeigniter v3", "PHP", "JS", "HTML", "CSS"],
     description_fr:
-      "J'ai participé au développement de cette application lors de mon alternance pendant mon Bachelor Développeur Web, j'ai créé tout ce que vous pouvez voir dans les captures d'écran (sauf la sidebar). Si vous voulez en savoir plus sur certaines images, vous pouvez me demander directement.",
+      "J'ai participé au développement de cette application lors de mon alternance pendant mon Bachelor Développeur Web, j'ai créé tout ce que vous pouvez voir dans les captures d'écran (sauf les autres parties de la sidebar et les header/footer). Si vous voulez en savoir plus sur certaines images, vous pouvez me demander directement.",
     description_en:
-      "I participated in the development of this application during my internship while pursuing my professional training in Applied Sciences. I created everything you see in the screenshots (except the sidebar). If you'd like to know more about any specific image, feel free to ask me directly.",
+      "I participated in the development of this application during my internship while pursuing my professional training in Applied Sciences. I created everything you see in the screenshots (except the other menus on the sidebar and the header/footer). If you'd like to know more about any specific image, feel free to ask me directly.",
   },
   {
     id: "scuffedify",
