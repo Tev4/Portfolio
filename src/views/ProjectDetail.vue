@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import NavBar from "@/components/NavBar.vue";
-import { useRoute, useRouter } from "vue-router";
+import { useRoute } from "vue-router";
 import { projects } from "../projects";
 import { ref, onMounted } from "vue";
 import { BCarousel, BCarouselSlide } from "bootstrap-vue-next";
@@ -8,7 +8,6 @@ import { useLanguage } from "@/composables/useLanguage";
 import { useDark } from "@vueuse/core";
 
 const route = useRoute();
-const router = useRouter();
 const project = projects.find((p) => p.id === route.params.id);
 
 const { language } = useLanguage();

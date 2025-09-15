@@ -57,8 +57,8 @@ const changeLanguage = (lang: string) => {
       </BNavText>
     </BNav>
 
-    <BNavbarBrand class="navbar-dark">
-      <RouterLink :to="`/`" class="no-link-style site-title">
+    <BNavbarBrand class="navbar-dark navbarbrand-button-style">
+      <RouterLink :to="`/`" class="no-link-style">
         <h2 class="fw-bold">Teva PETORIN</h2>
       </RouterLink>
     </BNavbarBrand>
@@ -125,6 +125,15 @@ const changeLanguage = (lang: string) => {
 .navbar-svg-link {
   margin-left: 0.25rem !important;
   margin-right: 0.25rem !important;
+}
+
+.navbarbrand-button-style {
+  border: #fff;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 20px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .fw-bold {

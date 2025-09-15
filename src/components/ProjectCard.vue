@@ -249,11 +249,16 @@ html.dark .card {
 }
 
 .card-link-btn {
-  fill-opacity: 65%;
-  transition: background-color, fill-opacity 0.2s ease;
+  opacity: 65%;
+  transition: fill-opacity 0.2s ease;
 }
 
 .card-link-btn:hover {
+  opacity: 100%;
   fill-opacity: 100%;
+}
+
+svg {
+  filter: drop-shadow(0px 0px 1px var(--vt-c-white));
 }
 </style>
