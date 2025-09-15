@@ -232,6 +232,10 @@ html.dark .card {
   color: white;
 }
 
+.custom-card-title h4 {
+  font-weight: 400;
+}
+
 .card-links {
   position: absolute;
   top: 0.3rem;

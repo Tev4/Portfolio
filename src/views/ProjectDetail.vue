@@ -194,6 +194,11 @@ onMounted(() => {
   margin-bottom: 0.5rem !important;
 }
 
+.project-title-row h2,
+.project-title-row h4 {
+  font-weight: 400;
+}
+
 .project_subtitle {
   opacity: 70%;
   margin-bottom: 0.05rem !important;
