@@ -128,10 +128,29 @@ const changeLanguage = (lang: string) => {
 }
 
 .navbarbrand-button-style {
-  border: #fff;
   border-style: solid;
   border-width: 1px;
   border-radius: 20px;
+  border-color: rgba(0, 0, 0, 0%);
+  transition: border-color 0.2s ease-out;
+  -webkit-transition: border-color 0.2s ease-out;
+  -moz-transition: border-color 0.2s ease-out;
+  -o-transition: border-color 0.2s ease-out;
+  -ms-transition: border-color 0.2s ease-out;
+}
+
+.navbarbrand-button-style:hover {
+  border-color: var(--vt-c-white);
+  transition: border-color 0.2s ease-in;
+  -webkit-transition: border-color 0.2s ease-in;
+  -moz-transition: border-color 0.2s ease-in;
+  -o-transition: border-color 0.2s ease-in;
+  -ms-transition: border-color 0.2s ease-in;
+}
+
+.navbarbrand-button-style h2 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .fw-bold {

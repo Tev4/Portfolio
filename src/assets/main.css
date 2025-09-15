@@ -28,6 +28,10 @@ main {
   z-index: 0;
   max-height: 15rem;
   transition: transform 0.2s 0s ease-in-out, z-index 0s 100ms;
+  -webkit-transition: transform 0.2s 0s ease-in-out, z-index 0s 100ms;
+  -moz-transition: transform 0.2s 0s ease-in-out, z-index 0s 100ms;
+  -o-transition: transform 0.2s 0s ease-in-out, z-index 0s 100ms;
+  -ms-transition: transform 0.2s 0s ease-in-out, z-index 0s 100ms;
 }
 
 .home_carousel .carousel-inner img {
@@ -44,6 +48,10 @@ main {
   transform: scale(1.25);
   z-index: 999;
   transition: transform 0.2s 0s ease-in-out, z-index 0s 0s;
+  -webkit-transition: transform 0.2s 0s ease-in-out, z-index 0s 0s;
+  -moz-transition: transform 0.2s 0s ease-in-out, z-index 0s 0s;
+  -o-transition: transform 0.2s 0s ease-in-out, z-index 0s 0s;
+  -ms-transition: transform 0.2s 0s ease-in-out, z-index 0s 0s;
 }
 
 .card:hover .carousel-inner img {
@@ -68,6 +76,10 @@ main {
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s ease-out;
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  -ms-transition: opacity 0.5s ease-out;
 }
 
 .fade-enter-from,

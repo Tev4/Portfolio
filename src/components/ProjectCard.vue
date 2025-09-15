@@ -246,11 +246,19 @@ html.dark .card {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s ease;
+  -webkit-transition: opacity 0.2s ease;
+  -moz-transition: opacity 0.2s ease;
+  -o-transition: opacity 0.2s ease;
+  -ms-transition: opacity 0.2s ease;
 }
 
 .card-link-btn {
   opacity: 65%;
   transition: fill-opacity 0.2s ease;
+  -webkit-transition: fill-opacity 0.2s ease;
+  -moz-transition: fill-opacity 0.2s ease;
+  -o-transition: fill-opacity 0.2s ease;
+  -ms-transition: fill-opacity 0.2s ease;
 }
 
 .card-link-btn:hover {
