@@ -126,7 +126,7 @@ main {
 }
 
 .detail_carousel .carousel-indicators {
-  bottom: -5vh;
+  bottom: -3rem;
 }
 
 /* Disgusting but i couldn't figure out to scale image otherwise, its a nightmare to modify that thing */
