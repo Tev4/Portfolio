@@ -148,7 +148,7 @@ const resume = () => {
           >
             <h4 class="m-0">{{ title }}</h4>
           </div>
-          <div class="card-links">
+          <div v-if="!isMobile" class="card-links">
             <a
               v-if="directlink"
               :href="directlink"
@@ -162,7 +162,7 @@ const resume = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 height="25"
                 width="25"
-                fill="#000000"
+                fill="#FFFFFF"
                 class="bi bi-box-arrow-up-right"
                 viewBox="0 0 16 16"
               >
@@ -189,7 +189,7 @@ const resume = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
                 height="30"
-                fill="#000000"
+                fill="#FFFFFF"
                 class="bi bi-github"
                 viewBox="0 0 16 16"
               >
@@ -210,7 +210,7 @@ const resume = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 height="30"
                 width="30"
-                fill="#000000"
+                fill="#FFFFFF"
                 viewBox="0 0 245.371 220.736"
               >
                 <path
@@ -279,7 +279,7 @@ html.dark .card {
 }
 
 .card-link-btn {
-  opacity: 65%;
+  opacity: 80%;
   transition: fill-opacity 0.2s ease;
   -webkit-transition: fill-opacity 0.2s ease;
   -moz-transition: fill-opacity 0.2s ease;
@@ -293,6 +293,6 @@ html.dark .card {
 }
 
 svg {
-  filter: drop-shadow(0px 0px 1px var(--vt-c-white));
+  filter: drop-shadow(0px 0px 2px #000000);
 }
 </style>
