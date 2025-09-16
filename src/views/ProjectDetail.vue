@@ -104,6 +104,8 @@ onMounted(() => {
           class="detail_carousel"
           indicators
           controls
+          no-animation
+          no-touch
           background="transparent"
         >
           <BCarouselSlide

@@ -98,10 +98,7 @@ main {
 
 .detail_carousel .carousel-inner img {
   object-fit: contain;
-  max-height: 30rem;
-}
-
-.detail_carousel .carousel-inner img {
+  max-height: 30vh;
   max-width: 75%;
   margin: auto !important;
 }
@@ -122,3 +119,36 @@ main {
 .detail_carousel .carousel-indicators {
   bottom: -5vh;
 }
+
+/* Disgusting but i couldn't figure out to scale image otherwise, its a nightmare to modify that thing */
+/* ( */
+@media (max-width: 768px) {
+  .detail_carousel .carousel-inner img {
+    max-height: 30vh;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .detail_carousel .carousel-inner img {
+    max-height: 40vh;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1200px) {
+  .detail_carousel .carousel-inner img {
+    max-height: 50vh;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .detail_carousel .carousel-inner img {
+    max-height: 60vh;
+  }
+}
+
+@media (min-width: 1400px) {
+  .detail_carousel .carousel-inner img {
+    max-height: 60vh;
+  }
+}
+/* ) */
