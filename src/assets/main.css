@@ -71,10 +71,10 @@ main {
     -o-transition: transform 0.2s 0s ease-in-out, z-index 0s 0s;
     -ms-transition: transform 0.2s 0s ease-in-out, z-index 0s 0s;
   }
-}
 
-.card:hover .carousel-inner img {
-  object-fit: contain;
+  .card:hover .carousel-inner img {
+    object-fit: contain;
+  }
 }
 
 .card-title {
