@@ -287,17 +287,29 @@ html.dark .flag-emoji-selected {
 .navbar-brand {
   margin: auto;
   transform: translateX(-1.5rem);
+  -webkit-transform: translateX(-1.5rem);
+  -moz-transform: translateX(-1.5rem);
+  -o-transform: translateX(-1.5rem);
+  -ms-transform: translateX(-1.5rem);
 }
 
 @media (max-width: 768px) {
   .navbar-brand {
     transform: translateX(1.8rem);
+    -webkit-transform: translateX(-1.8rem);
+    -moz-transform: translateX(-1.8rem);
+    -o-transform: translateX(-1.8rem);
+    -ms-transform: translateX(-1.8rem);
   }
 }
 
 @media (max-width: 325px) {
   .navbar-brand {
     transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
+    -ms-transform: translateX(0);
   }
 }
 
