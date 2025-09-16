@@ -95,8 +95,10 @@ const loadProjectImages = async (project: string) => {
 onMounted(async () => {
   isMobile.value = /Mobi|Android/i.test(navigator.userAgent);
   await loadProjectImages(props.project);
-  await nextTick();
-  myCarousel.value?.pause();
+  if (!isMobile.value) {
+    await nextTick();
+    myCarousel.value?.pause();
+  }
 });
 
 const pause = () => {
@@ -123,7 +125,7 @@ const resume = () => {
         >
           <BCarousel
             :interval="2000"
-            ride="carousel"
+            :ride="isMobile ? 'carousel' : false"
             ref="project_carousel"
             no-hover-pause
             class="home_carousel"

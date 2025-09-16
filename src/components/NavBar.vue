@@ -286,21 +286,18 @@ html.dark .flag-emoji-selected {
 
 .navbar-brand {
   margin: auto;
-  padding-right: 3vw;
+  transform: translateX(-1.5rem);
 }
 
 @media (max-width: 768px) {
   .navbar-brand {
-    margin: auto;
-    padding-right: 0;
-    padding-left: 3.6rem;
+    transform: translateX(1.8rem);
   }
 }
 
 @media (max-width: 325px) {
   .navbar-brand {
-    padding-left: 0;
-    margin: 0;
+    transform: translateX(0);
   }
 }
 
