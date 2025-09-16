@@ -47,7 +47,7 @@ main {
 }
 
 .carousel {
-  touch-action: pan-y pinch-zoom !important;
+  touch-action: pan-y pan-x pinch-zoom !important;
 }
 
 .home_carousel .carousel-inner img {
