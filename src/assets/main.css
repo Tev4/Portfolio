@@ -18,12 +18,18 @@
 }
 
 main {
-  margin-top: 7rem !important;
+  margin-top: 12vh !important;
 }
 
 @media (max-width: 768px) {
   main {
-    margin-top: 4rem !important;
+    margin-top: 7vh !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  main {
+    margin-top: 8.6vh !important;
   }
 }
 
@@ -38,6 +44,10 @@ main {
   -moz-transition: transform 0.2s 0s ease-in-out, z-index 0s 100ms;
   -o-transition: transform 0.2s 0s ease-in-out, z-index 0s 100ms;
   -ms-transition: transform 0.2s 0s ease-in-out, z-index 0s 100ms;
+}
+
+.carousel {
+  touch-action: pan-y pinch-zoom !important;
 }
 
 .home_carousel .carousel-inner img {
@@ -98,7 +108,6 @@ main {
 
 .detail_carousel .carousel-inner img {
   object-fit: contain;
-  max-height: 30vh;
   max-width: 75%;
   margin: auto !important;
 }
@@ -124,7 +133,7 @@ main {
 /* ( */
 @media (max-width: 768px) {
   .detail_carousel .carousel-inner img {
-    max-height: 30vh;
+    max-height: 29vh;
   }
 }
 
