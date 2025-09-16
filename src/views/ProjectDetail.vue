@@ -207,12 +207,11 @@ onMounted(() => {
 .project_description {
   text-align: center;
   max-width: 50rem;
-  margin: 2rem auto 0 auto;
+  margin: 3rem auto 0 auto;
 }
 
 .carousel {
-  max-height: 35rem;
-  height: 35rem;
+  max-height: 60vw;
   max-width: 80rem;
 }
 

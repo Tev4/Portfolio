@@ -45,11 +45,6 @@ main {
   height: 15rem;
 }
 
-.detail_carousel .carousel-inner img {
-  object-fit: scale-down;
-  max-height: 30rem;
-}
-
 .card:hover {
   transform: scale(1.25);
   z-index: 999;
@@ -99,4 +94,31 @@ main {
 
 .offcanvas-body {
   padding-top: 0 !important;
+}
+
+.detail_carousel .carousel-inner img {
+  object-fit: contain;
+  max-height: 30rem;
+}
+
+.detail_carousel .carousel-inner img {
+  max-width: 75%;
+  margin: auto !important;
+}
+
+.detail_carousel .carousel {
+  width: 100%;
+}
+
+.detail_carousel .carousel-inner {
+  height: 100%;
+}
+
+.detail_carousel .carousel-item {
+  display: flex !important;
+  height: 100%;
+}
+
+.detail_carousel .carousel-indicators {
+  bottom: -5vh;
 }
