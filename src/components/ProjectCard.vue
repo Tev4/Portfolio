@@ -62,6 +62,9 @@ const loadProjectImages = async (project: string) => {
   document.head.appendChild(preloadLink);
 
   images.value = [firstImageUrl];
+  if (isMobile.value) {
+    loadedImagesCache.value[project] = [firstImageUrl];
+  }
 
   if (!isMobile.value) {
     // --- Prefetch the remaining images in background ---
