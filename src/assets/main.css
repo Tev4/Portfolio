@@ -18,18 +18,24 @@
 }
 
 main {
-  margin-top: 12vh !important;
+  margin-top: 7rem !important;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 264px) {
   main {
-    margin-top: 7vh !important;
+    margin-top: 6.5rem !important;
+  }
+}
+
+@media (min-width: 264px) and (max-width: 768px) {
+  main {
+    margin-top: 4.25rem !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   main {
-    margin-top: 8.6vh !important;
+    margin-top: 5rem !important;
   }
 }
 
