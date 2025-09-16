@@ -61,14 +61,16 @@ main {
   height: 15rem;
 }
 
-.card:hover {
-  transform: scale(1.25);
-  z-index: 999;
-  transition: transform 0.2s 0s ease-in-out, z-index 0s 0s;
-  -webkit-transition: transform 0.2s 0s ease-in-out, z-index 0s 0s;
-  -moz-transition: transform 0.2s 0s ease-in-out, z-index 0s 0s;
-  -o-transition: transform 0.2s 0s ease-in-out, z-index 0s 0s;
-  -ms-transition: transform 0.2s 0s ease-in-out, z-index 0s 0s;
+@media (hover: hover) and (min-width: 768px) {
+  .card:hover {
+    transform: scale(1.25);
+    z-index: 999;
+    transition: transform 0.2s 0s ease-in-out, z-index 0s 0s;
+    -webkit-transition: transform 0.2s 0s ease-in-out, z-index 0s 0s;
+    -moz-transition: transform 0.2s 0s ease-in-out, z-index 0s 0s;
+    -o-transition: transform 0.2s 0s ease-in-out, z-index 0s 0s;
+    -ms-transition: transform 0.2s 0s ease-in-out, z-index 0s 0s;
+  }
 }
 
 .card:hover .carousel-inner img {

@@ -14,6 +14,7 @@ const props = defineProps<{
 
 const isDark = useDark();
 const { language } = useLanguage();
+const isMobile = ref(false);
 
 const imageModules = import.meta.glob("/src/assets/project_images/*/*.png", {
   eager: false, // Lazy load
@@ -62,45 +63,61 @@ const loadProjectImages = async (project: string) => {
 
   images.value = [firstImageUrl];
 
-  // --- Prefetch the remaining images in background ---
-  (async () => {
-    const remaining = await Promise.all(
-      filteredEntries.slice(1).map(async ([, importer]) => {
-        const mod = await importer();
-        const url = mod as string;
+  if (!isMobile.value) {
+    // --- Prefetch the remaining images in background ---
+    (async () => {
+      const remaining = await Promise.all(
+        filteredEntries.slice(1).map(async ([, importer]) => {
+          const mod = await importer();
+          const url = mod as string;
 
-        // Add rel="prefetch" for lazy loading
-        const link = document.createElement("link");
-        link.rel = "prefetch";
-        link.as = "image";
-        link.href = url;
-        document.head.appendChild(link);
+          // Add rel="prefetch" for lazy loading
+          const link = document.createElement("link");
+          link.rel = "prefetch";
+          link.as = "image";
+          link.href = url;
+          document.head.appendChild(link);
 
-        return url;
-      })
-    );
+          return url;
+        })
+      );
 
-    const all = [firstImageUrl, ...remaining];
-    loadedImagesCache.value[project] = all;
-    images.value = all; // Update carousel once everything is prefetched
-  })();
+      const all = [firstImageUrl, ...remaining];
+      loadedImagesCache.value[project] = all;
+      images.value = all; // Update carousel once everything is prefetched
+    })();
+  }
 };
 
 onMounted(async () => {
+  isMobile.value = /Mobi|Android/i.test(navigator.userAgent);
   await loadProjectImages(props.project);
   await nextTick();
   myCarousel.value?.pause();
 });
 
-const pause = () => myCarousel.value?.pause();
-const resume = () => myCarousel.value?.resume();
+const pause = () => {
+  if (!isMobile.value) {
+    myCarousel.value?.pause();
+  }
+};
+
+const resume = () => {
+  if (!isMobile.value) {
+    myCarousel.value?.resume();
+  }
+};
 </script>
 
 <template>
   <transition name="fade" appear>
     <BCol cols="12" md="6" lg="4" class="mb-4">
       <RouterLink :to="`/projects/${project}`">
-        <BCard @mouseenter="resume" @mouseleave="pause">
+        <BCard
+          :class="{ 'no-hover': isMobile }"
+          @mouseenter="!isMobile && resume()"
+          @mouseleave="!isMobile && pause()"
+        >
           <BCarousel
             :interval="2000"
             ride="carousel"
