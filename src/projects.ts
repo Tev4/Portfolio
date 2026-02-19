@@ -44,6 +44,19 @@ export const projects: Project[] = [
     githubLink: "https://github.com/Tev4/scuffedify",
   },
   {
+    id: "simple_reminders",
+    title: "Simple Reminders",
+    homeTitle: true,
+    subtitle_fr: "Application de rappels pour Windows",
+    subtitle_en: "Reminder application for Windows",
+    techStack: ["C#", ".NET", "90% AI made"],
+    description_fr:
+      "Application windows permettant de créer des rappels, produisant des notifications quand ils se déclenchent",
+    description_en:
+      "Windows application that allows you to create reminders, producing notifications when they are triggered.",
+    githubLink: "https://github.com/Tev4/SimpleReminders",
+  },
+  {
     id: "cigecfrais_web",
     title: "Cigecfrais: Web",
     homeTitle: true,
