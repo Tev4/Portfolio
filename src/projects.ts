@@ -49,7 +49,7 @@ export const projects: Project[] = [
     homeTitle: true,
     subtitle_fr: "Application de rappels pour Windows",
     subtitle_en: "Reminder application for Windows",
-    techStack: ["C#", ".NET", "90% AI made"],
+    techStack: ["C#", ".NET", "Vibe Coding"],
     description_fr:
       "Application windows permettant de créer des rappels, produisant des notifications quand ils se déclenchent",
     description_en:
