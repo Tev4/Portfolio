@@ -16,6 +16,19 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "simple_reminders",
+    title: "Simple Reminders",
+    homeTitle: true,
+    subtitle_fr: "Application de rappels pour Windows",
+    subtitle_en: "Reminder application for Windows",
+    techStack: ["C#", ".NET", "Agentic Coding"],
+    description_fr:
+      "Application windows permettant de créer des rappels, produisant des notifications quand ils se déclenchent",
+    description_en:
+      "Windows application that allows you to create reminders, producing notifications when they are triggered.",
+    githubLink: "https://github.com/Tev4/SimpleReminders",
+  },
+  {
     id: "gpa_informatique",
     title: "GPA Informatique",
     homeTitle: true,
@@ -43,19 +56,7 @@ export const projects: Project[] = [
     directLink: "https://scuffedify.vercel.app/",
     githubLink: "https://github.com/Tev4/scuffedify",
   },
-  {
-    id: "simple_reminders",
-    title: "Simple Reminders",
-    homeTitle: true,
-    subtitle_fr: "Application de rappels pour Windows",
-    subtitle_en: "Reminder application for Windows",
-    techStack: ["C#", ".NET", "Vibe Coding"],
-    description_fr:
-      "Application windows permettant de créer des rappels, produisant des notifications quand ils se déclenchent",
-    description_en:
-      "Windows application that allows you to create reminders, producing notifications when they are triggered.",
-    githubLink: "https://github.com/Tev4/SimpleReminders",
-  },
+
   {
     id: "cigecfrais_web",
     title: "Cigecfrais: Web",
