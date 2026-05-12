@@ -16,7 +16,7 @@ const isDark = useDark();
 const { language } = useLanguage();
 const isMobile = ref(false);
 
-const imageModules = import.meta.glob("/src/assets/project_images/*/*.png", {
+const imageModules = import.meta.glob("/src/assets/project_images/*/*.webp", {
   eager: false, // Lazy load
   import: "default",
 });
@@ -37,11 +37,11 @@ const loadProjectImages = async (project: string) => {
 
   // Filter and sort image paths
   const filteredEntries = Object.entries(imageModules).filter(([path]) =>
-    path.startsWith(prefix)
+    path.startsWith(prefix),
   );
   filteredEntries.sort(([pathA], [pathB]) => {
     const getNumber = (path: string) => {
-      const match = path.match(/(\d+)\.png$/);
+      const match = path.match(/(\d+)\.webp$/);
       return match ? parseInt(match[1], 10) : 0;
     };
     return getNumber(pathA) - getNumber(pathB);
@@ -82,7 +82,7 @@ const loadProjectImages = async (project: string) => {
           document.head.appendChild(link);
 
           return url;
-        })
+        }),
       );
 
       const all = [firstImageUrl, ...remaining];
